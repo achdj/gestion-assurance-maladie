@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ErrorHandler } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'client';
+  isAuth = false;
+
+  usersOne = 'Achille';
+  usersTwo = 'Kokou';
+  usersThree = 'Fabrice';
+  
+  constructor() {
+    setTimeout (
+       ()=> {
+        this.isAuth = true;
+      }, 4000
+    );
+  }
+  onConnecter() {
+    console.log('On connecte tout');
+  }
 }

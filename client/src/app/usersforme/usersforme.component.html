@@ -1,0 +1,10 @@
+<li class="list-group-item">
+    <div
+    style="background-color:cyan;"
+    *ngIf="usersName === 'Achille'">
+    <h4>Ceci est la partie des information pour les clients société</h4>
+    <input type="text" class="form-control" placeholder="nom">
+    </div>
+    <h4>Ceci sont les informations des : {{ usersName }} -- Statut : {{ getStatus() }}</h4>
+    <input type="text" class="form-control" [(ngModel)]="usersName">
+</li>
